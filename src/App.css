@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+@layer base {
+  body {
+    /* // [ANNIE] figure out how to change according to theme used*/
+    @apply text-white bg-gray-600;
+  }
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.terminal-theme {
+  background-color: #1a1a1a;
+  color: #eeeeee;
+}
+
+.divider {
+  background-color: #222;
+  border: solid 1px #333;
+}
+
+.divider::before,
+.divider::after {
+  content: none;
+}
