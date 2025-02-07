@@ -1,7 +1,6 @@
 import React, {useRef, useState} from 'react';
 import './App.css'
 
-import {ChevronLeftIcon, ChevronRightIcon} from '@heroicons/react/24/outline';
 import ChatBox from "./components/ChatBox.tsx";
 import Terminal from "./components/Terminal.tsx";
 import SplitPane from "./components/SplitPane.tsx";
@@ -34,8 +33,7 @@ const App = ({width}: MainViewProps) => {
                     <div className="w-full h-full border-r flex">
                         <div className="flex-1 flex flex-col bg-base-100">
                             <div className="h-1/2 flex border-b">
-                                <SplitPane initialWidth={220}
-                                           color={"#222"}>
+                                <SplitPane initialWidth={220}>
                                     <div className="p-2 bg-base-200 overflow-y-auto h-full w-full">
                                         <FileTree data={fileTreeData}/>
                                     </div>
@@ -51,7 +49,6 @@ const App = ({width}: MainViewProps) => {
                         </div>
                     </div>
                 </SplitPane>
-
             </div>
         </div>
     );
